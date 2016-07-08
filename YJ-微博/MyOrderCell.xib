@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyOrderCell">
+            <rect key="frame" x="0.0" y="0.0" width="221" height="359"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="221" height="359"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RQq-az-5WY">
+                        <rect key="frame" x="0.0" y="0.0" width="221" height="359"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RQq-az-5WY" secondAttribute="trailing" id="0JO-ei-DIp"/>
+                <constraint firstItem="RQq-az-5WY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b6x-X2-JRX"/>
+                <constraint firstAttribute="bottom" secondItem="RQq-az-5WY" secondAttribute="bottom" id="bhe-eG-V17"/>
+                <constraint firstItem="RQq-az-5WY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mjp-nG-DuJ"/>
+            </constraints>
+            <size key="customSize" width="221" height="359"/>
+            <connections>
+                <outlet property="tableViewOrder" destination="RQq-az-5WY" id="1Qt-Lg-BhM"/>
+            </connections>
+            <point key="canvasLocation" x="410.5" y="275.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

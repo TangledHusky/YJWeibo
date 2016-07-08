@@ -1,0 +1,72 @@
+//
+//  YJ-Prefix.pch
+//  YJ-微博
+//
+//  Created by MACBOOK on 15/12/21.
+//  Copyright © 2015年 MACBOOK. All rights reserved.
+//
+
+#ifndef YJ_Prefix_pch
+#define YJ_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIView+Extension.h"
+#import "UINavigationItem+Extension.h"
+#import "UIWindow+Extension.h"
+#import "NSString+Extension.h"
+#import "UITextView+Extension.h"
+#import "UITableView+Extension.h"
+#import "ConstHead.h"
+
+//随机色
+#define randomColor YJColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
+
+//根据整数获取颜色
+#define YJColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+//根据计算好的小数获取颜色
+#define YJColorWithDecimal(r,g,b) [UIColor colorWithRed:r green:g blue:b alpha:1.0]
+
+//控制日志打印
+#ifdef DEBUG
+#define  YJLog(...) NSLog(__VA_ARGS__)
+#else
+#define  YJLog(...)
+#endif
+
+
+//通知定义
+#define YJNotification [NSNotificationCenter defaultCenter]
+
+//表情选中的通知
+#define YJEmotioDidSelectNotification @"YJEmotionDidSelectNotification"
+#define YJSelectEmotionKey @"YJSelectEmotionKey"
+//表情删除的通知
+#define YJEmotionDidDeleteNotification @"YJEmotionDidDeleteNotification"
+#define YJDeleteEmotionKey @"YJDeleteEmotionKey"
+
+
+/*  备忘录模块 */
+#define shitYellow RGB(253, 178, 50)
+
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+
+#define iphone6_ScreenWidth 375.0
+#define iphone6_ScreenHeight 667.0
+
+#define kWindowWidth ([UIScreen mainScreen].bounds.size.width)
+#define kWindowHeight ([UIScreen mainScreen].bounds.size.height)
+
+#define kWidthRatio kScreenWidth/iphone6_ScreenWidth
+#define kHeightRatio kScreenHeight/iphone6_ScreenHeight
+
+#define showAlert(_msg){UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:_msg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定",nil];[alert show];}
+
+
+
+#endif /* YJ_Prefix_pch */
